@@ -29,18 +29,20 @@ main {
 #login {
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 515px;
     border-radius: 20px;
     overflow: hidden; /* Tudo que estiver fora da borda ficará escondido */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.477);
-    transition: width 0.3s, height 0.3s; /* Suavizando a transição de medias */
-    transition-timing-function: ease; /* Suaviza durante a animação */
 
     /* Centralizando */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Ajustando */
+    transform: translate(-50%, -50%); /* Ajustando a centralização */
+
+    /* Deixe sempre as transições nas últimas linhas */
+    transition: width 0.3s, height 0.3s; /* Suavizando a transição de medias */
+    transition-timing-function: ease; /* Suaviza durante a animação */
 }
 
 #login > #imagem {
@@ -63,4 +65,65 @@ main {
 
 #formulario > p {
     font-size: 0.8em;
+}
+
+form > .campo {
+    background-color: #5f2c82;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    color: white;
+    margin: 5px 0px;
+    padding: 5px;
+    border: 2px solid #5f2c82;
+}
+
+.campo > input {
+    font-size: 1em;
+    background-color: #52c2bf;
+    height: 100%;
+    width: calc(100% - 48px);
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.campo > input:focus-within { /* Quando eu clicar... */
+    background-color: white;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #3c8380;
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid #49a09d;
+    border-radius: 7px;
+    text-decoration: none;
+    color: #357371;
+}
+
+form > a.botao:hover {
+    background-color: #5cc8c4;
 }
